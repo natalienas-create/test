@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nome Sobrenome — Design de Produto</title>
+<meta name="description" content="Portfolio de design de produto. Estudos de caso de pesquisa, UX e design de produto.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- reusable hand-drawn wobble filter -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="wobble" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#top" class="nav__mark">NS.</a>
+  <nav class="nav__links">
+    <a href="#trabalhos">trabalhos</a>
+    <a href="#sobre">sobre</a>
+    <a href="#contato">contato</a>
+  </nav>
+</header>
+
+<!-- ============ HERO — BALL OF THREADS ============ -->
+<section class="hero" id="top">
+  <div class="hero__stage">
+
+    <!-- floating tags, each pinned to the ball with a thin thread -->
+    <div class="tag-field" aria-hidden="true">
+      <span class="tag tag--1">business requirements</span>
+      <span class="tag tag--2">technical constraints</span>
+      <span class="tag tag--3">conflicting stakeholder opinions</span>
+      <span class="tag tag--4">what users say</span>
+      <span class="tag tag--5">what users do</span>
+      <span class="tag tag--6">user pain points</span>
+    </div>
+
+    <!-- the tangled ball, hand-drawn scribble path -->
+    <svg class="ball" viewBox="70 80 280 320" aria-hidden="true">
+      <g class="ball__group">
+        <path class="ball__strand ball__strand--a" d="M180,120 C260,90 320,140 300,190 C280,240 210,220 210,260 C210,300 270,300 260,340 C250,375 180,370 160,330 C140,290 190,280 170,240 C150,200 90,210 100,160 C108,122 150,100 180,120 Z"/>
+        <path class="ball__strand ball__strand--b" d="M140,150 C200,110 280,130 290,180 C300,225 240,235 250,270 C260,305 310,300 300,335 C290,368 220,365 205,330 C192,300 235,290 220,255 C205,218 150,230 140,190 C132,160 120,168 140,150 Z"/>
+        <path class="ball__strand ball__strand--c" d="M120,200 C110,150 170,105 230,115 C285,124 320,165 305,205 C292,240 245,225 240,260 C235,298 285,310 270,345 C255,378 190,372 175,338 C160,305 200,300 185,265 C168,228 128,245 120,200 Z"/>
+        <path class="ball__strand ball__strand--d" d="M155,130 C215,95 300,120 305,175 C309,220 255,215 258,255 C261,298 315,295 305,330"/>
+        <path class="ball__strand ball__strand--e" d="M110,180 C160,230 150,290 200,310 C240,326 260,300 290,260"/>
+        <path class="ball__strand ball__strand--f" d="M200,100 C170,140 130,150 130,200 C130,250 190,240 195,290 C198,325 240,340 275,320"/>
+        <!-- loose thread end trailing toward the figure -->
+        <path class="ball__tail" d="M305,330 C295,355 250,360 230,385 C215,404 190,412 175,430"/>
+      </g>
+    </svg>
+
+    <!-- stick figure looking up, will animate on scroll -->
+    <svg class="figure figure--hero" viewBox="0 0 120 160" aria-hidden="true">
+      <g class="figure__body">
+        <circle class="figure__head" cx="60" cy="26" r="14"/>
+        <line class="figure__limb" x1="60" y1="40" x2="60" y2="95"/>
+        <line class="figure__limb figure__arm-l" x1="60" y1="55" x2="30" y2="40"/>
+        <line class="figure__limb figure__arm-r" x1="60" y1="55" x2="90" y2="40"/>
+        <line class="figure__limb" x1="60" y1="95" x2="35" y2="150"/>
+        <line class="figure__limb" x1="60" y1="95" x2="85" y2="150"/>
+      </g>
+    </svg>
+
+  </div>
+
+  <div class="hero__type">
+    <h1 class="hero__title">Nome Sobrenome</h1>
+    <p class="hero__subtitle">design de produto — desenrolando problemas complicados, um fio de cada vez.</p>
+  </div>
+
+  <button class="scroll-cue" id="scrollCue" aria-label="Rolar para puxar o fio">
+    <svg viewBox="0 0 40 60" aria-hidden="true"><path d="M20,2 C20,20 20,40 20,52 M8,42 L20,56 L32,42"/></svg>
+    <span>puxe o fio</span>
+  </button>
+</section>
+
+<!-- ============ THREAD PATH / CASE STUDIES ============ -->
+<section class="thread-path" id="trabalhos">
+
+  <svg class="thread-line" id="threadLine" viewBox="0 0 100 1600" preserveAspectRatio="none" aria-hidden="true">
+    <path id="threadPath" d="M50,0 C10,120 90,220 50,340 C10,460 90,560 50,680 C10,800 90,900 50,1020 C10,1140 90,1240 50,1360 C20,1440 60,1500 50,1600"/>
+  </svg>
+
+  <svg class="figure figure--thread" id="threadFigure" viewBox="0 0 120 160" aria-hidden="true">
+    <g class="figure__body">
+      <circle class="figure__head" cx="60" cy="26" r="14"/>
+      <line class="figure__limb" x1="60" y1="40" x2="60" y2="95"/>
+      <line class="figure__limb" x1="60" y1="55" x2="25" y2="70"/>
+      <line class="figure__limb" x1="60" y1="55" x2="95" y2="70"/>
+      <line class="figure__limb" x1="60" y1="95" x2="35" y2="150"/>
+      <line class="figure__limb" x1="60" y1="95" x2="85" y2="150"/>
+    </g>
+  </svg>
+
+  <h2 class="thread-path__intro">
+    <span>cada projeto é mais um nó.</span>
+    <small>é aqui que vivem os estudos de caso.</small>
+  </h2>
+
+  <div class="knots" id="knots"><!-- injected by js/script.js from CASE_STUDIES --></div>
+
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="sobre">
+  <svg class="about__doodle" viewBox="0 0 200 120" aria-hidden="true">
+    <path d="M10,60 C40,20 70,100 100,60 C130,20 160,100 190,60"/>
+  </svg>
+  <h2>sobre o novelo</h2>
+  <p>
+    Sou uma designer de produto que gosta de bagunça — a boa bagunça, aquela cheia de
+    requisitos de negócio, restrições técnicas e opiniões divergentes de stakeholders.
+    Meu trabalho é pegar a ponta do fio certo e puxar, com calma, até a história do
+    usuário aparecer clara do outro lado.
+  </p>
+  <p>
+    Nos últimos anos trabalhei com pesquisa, UX e estratégia de produto em times de
+    tamanhos diferentes, sempre tentando trazer o "o que o usuário diz" e o "o que o
+    usuário faz" para a mesma mesa.
+  </p>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<footer class="contact" id="contato">
+  <svg class="contact__doodle" viewBox="0 0 300 60" aria-hidden="true">
+    <path d="M5,30 C60,5 100,55 150,30 C200,5 240,55 295,30"/>
+  </svg>
+  <h2>vamos desenrolar algo juntos?</h2>
+  <div class="contact__links">
+    <a href="mailto:oi@seudominio.com">oi@seudominio.com</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">instagram</a>
+  </div>
+  <p class="contact__foot">feito à mão (e com bastante fio) © <span id="year"></span></p>
+</footer>
+
+<!-- ============ CASE STUDY OVERLAY ============ -->
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="overlay__hole" id="overlayHole"></div>
+  <div class="overlay__content" id="overlayContent">
+    <button class="overlay__close" id="overlayClose" aria-label="Fechar estudo de caso">
+      <svg viewBox="0 0 40 40"><path d="M8,8 L32,32 M32,8 L8,32"/></svg>
+    </button>
+
+    <svg class="figure figure--dive" viewBox="0 0 120 160" aria-hidden="true">
+      <g class="figure__body">
+        <circle class="figure__head" cx="60" cy="26" r="14"/>
+        <path class="figure__snorkel" d="M70,16 C82,10 86,18 82,26 M82,26 L82,4"/>
+        <line class="figure__limb" x1="60" y1="40" x2="60" y2="95"/>
+        <line class="figure__limb" x1="60" y1="55" x2="20" y2="45"/>
+        <line class="figure__limb" x1="60" y1="55" x2="100" y2="45"/>
+        <line class="figure__limb" x1="60" y1="95" x2="30" y2="145"/>
+        <line class="figure__limb" x1="60" y1="95" x2="90" y2="145"/>
+      </g>
+    </svg>
+
+    <article class="case" id="caseArticle">
+      <!-- injected per-project by js/script.js -->
+    </article>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
